@@ -1,5 +1,5 @@
 // src/components/Contacto.jsx
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 // Asegúrate de importar los estilos del dropdown personalizado
 
