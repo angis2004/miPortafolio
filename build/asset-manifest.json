@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.96f8b5d0.css",
+    "main.js": "/static/js/main.1044a682.js",
+    "static/js/453.211be4f6.chunk.js": "/static/js/453.211be4f6.chunk.js",
+    "static/media/hringenieros.png": "/static/media/hringenieros.2d2ab8b98372ffed6af9.png",
+    "static/media/fortika2.png": "/static/media/fortika2.3d24327eedfaa31eda02.png",
+    "static/media/Globilandia.png": "/static/media/Globilandia.bfb44c85835b4eb5e63b.png",
+    "static/media/Maelosolar.png": "/static/media/Maelosolar.c157749814dfe0b8bf05.png",
+    "static/media/image 7.png": "/static/media/image 7.f4022ea92c13bb06ca05.png",
+    "static/media/Kallpa-center.png": "/static/media/Kallpa-center.710cba93fbb9e56f80cb.png",
+    "static/media/Documentacion2.png": "/static/media/Documentacion2.c525cc8e0129e567b40c.png",
+    "static/media/PaoloAldea.png": "/static/media/PaoloAldea.e3d1732cdfda2d373803.png",
+    "static/media/design.png": "/static/media/design.1f16841c953f74529931.png",
+    "static/media/siseg.png": "/static/media/siseg.d755b51f573f97f921bb.png",
+    "static/media/Landing-Page.png": "/static/media/Landing-Page.25a075ccfa1f07540808.png",
+    "static/media/react+html.png": "/static/media/react+html.3a46f8f6bcc957189751.png",
+    "static/media/landing3.png": "/static/media/landing3.5b9a0364757d473ab59c.png",
+    "static/media/perfil.jpg": "/static/media/perfil.36dcadca19c04cdc7807.jpg",
+    "index.html": "/index.html",
+    "main.96f8b5d0.css.map": "/static/css/main.96f8b5d0.css.map",
+    "main.1044a682.js.map": "/static/js/main.1044a682.js.map",
+    "453.211be4f6.chunk.js.map": "/static/js/453.211be4f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96f8b5d0.css",
+    "static/js/main.1044a682.js"
+  ]
+}
