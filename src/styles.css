@@ -403,6 +403,7 @@ span {
 .education {
   padding: 100px 15px;
   background: var(--second-bg-color);
+  padding: 10rem 3% 2rem;
 }
 
 .education h2 {
@@ -648,9 +649,10 @@ margin: 5rem 2rem;
 
 /************ Projects Css ************/
 .project {
-  padding: 80px 0;
+  /* padding: 80px 0; */
   position: relative;
   background-color: black;
+  padding: 10rem 3% 2rem;
 }
 .project h2 {
 	font-size: 8rem;
@@ -760,7 +762,7 @@ margin: 5rem 2rem;
   transform: translate(-50%, -50%);
   transition: 0.5s ease-in-out;
   opacity: 0;
-  width: 100%;
+  width: 90%;
 }
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
@@ -771,10 +773,11 @@ margin: 5rem 2rem;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
+  margin-bottom: 20px;
 }
 .proj-txtx span {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 800;
   font-size: 15px;
   letter-spacing: 0.8px;
   color: black;
@@ -789,13 +792,12 @@ margin: 5rem 2rem;
 }
 
 
-
-@media ( max-width:991px){
-
-.row {
-/* margin: 1rem 0rem; */
-    padding: 1.5rem;
-}
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        width: 100% !important;
+        /* max-width: 720px; */
+        padding: 10rem 3% 2rem;
+    }
 }
 
 
@@ -876,6 +878,7 @@ margin: 5rem 2rem;
 
 .contacto {
   background-color: var(--bg-color);
+  
 }
 
 form{
@@ -1073,6 +1076,7 @@ select:focus {
 
   .contacto form {
     flex-direction: column;
+    padding: 0 3%;
   }
 
   .footer {
