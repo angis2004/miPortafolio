@@ -27,8 +27,8 @@ Soy una diseñadora web creativa y detallista con formación en la carrera de co
 
         </div>
         <div className="btn-group">
-          <a href="/cvTicllacuriMoscoso-Angie.pdf" className="btn">Descarga CV </a>
-          <a href="#contact" className="btn">Contactame</a>
+          <a href="/cvTicllacuriMoscoso-Angie.pdf"  target="_blank" className="btn">Descarga CV </a>
+          <a href="#contacto" className="btn">Contactame</a>
         </div>
       </div>
       <div className="home-img">
