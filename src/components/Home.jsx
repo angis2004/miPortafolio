@@ -18,7 +18,7 @@ Soy una diseñadora web creativa y detallista con formación en la carrera de co
           <a href="https://www.linkedin.com/in/angie-ticllacuri-terra-go-a7a614238/" target="_blank" rel="noopener noreferrer">
           <i className="bx bxl-linkedin"></i>
           </a>
-          <a href="https://github.com/angis2004" >
+          <a href="https://github.com/angis2004" target="_blank" rel="noopener noreferrer" >
           <i className="bx bxl-github"></i>
           </a>
         <a href="https://www.instagram.com/angieticllacur27/" target="_blank" rel="noopener noreferrer">
