@@ -47,16 +47,26 @@
 
 
 :root {
+  /* 🎨 Colores principales */
   --bg-color: #080808;
   --second-bg-color: #131313;
-  --text-color: #ffff;
-  --main-color: #7d48cc;
- --dropdown-height: 0;
+  --text-color: #ffffff; /* corregí #ffff → #ffffff */
+  --main-color: #e3e0f3; /* Color base */
+  --main-glow: 0 0 10px var(--main-color),
+               0 0 20px var(--main-color),
+               0 0 40px var(--main-color); /* Brillo = BOX SHADOW*/
+
+  /* 📂 Dropdown */
+  --dropdown-height: 0;
   --rotate-arrow: 0;
   --translate-value: 0;
   --list-opacity: 0;
+
+  /* ⏱️ Transiciones */
   --transition-time: 0.4s;
   --transition-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* 🔘 Bordes y tamaños */
   --border-radius: 4rem;
   --list-button-height: 4.6rem;
   --floating-icon-size: 26;
@@ -103,6 +113,7 @@ h2{
   font-weight: 800;
   cursor: pointer;
   transition: 0.3s ease;
+  text-shadow: var(--main-glow); 
 }
 
 .logo:hover {
@@ -129,6 +140,7 @@ text-decoration: none;
 .navbar a.active {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
+ 
 }
 
 #menu-icon {
@@ -228,12 +240,19 @@ span {
   box-shadow: 0 0 25px var(--main-color);
   cursor: pointer;
   transition: 0.4s ease-in-out;
+   box-shadow: 
+    0 0 10ch var(--main-color),
+    0 0 15px var(--main-color),
+    0 0 20px var(--main-color);
 }
 
 .home-img img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 25px var(-main-color) 0 0 50px var(--main-color) 0 0 100px
-    var(--main-color);
+  /* border: 3px solid var(--main-color); */
+  box-shadow: 
+    0 0 25px var(--main-color),
+    0 0 50px var(--main-color),
+    0 0 45px var(--main-color);
 }
 
 .home-content p {
@@ -253,7 +272,7 @@ span {
   border: 2px solid var(--main-color);
   font-size: 2.5rem;
   border-radius: 50%;
-  color: var(--main-color);
+ color: var(--main-color); 
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.3s ease-in-out;
 }
@@ -262,7 +281,8 @@ span {
   color: var(--text-color);
   transform: scale(1.3) translateY(-5px);
   box-shadow: 0 0 25px var(-main-color);
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
+  background-color: #757575;
 }
 
 .btn {
@@ -701,7 +721,7 @@ margin: 5rem 2rem;
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, var(--main-color) -5.91%, #baa1d5 111.58%);
+    background: linear-gradient(90.21deg, #333434 -5.91%, #8f8d9e 111.58%);
   /* background: var(--main-color); */
     top: 0;
     left: 0;
@@ -744,7 +764,8 @@ margin: 5rem 2rem;
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #7440c4 -5.91%, #7d48cc 111.58%);
+  /* background: linear-gradient(90.21deg, #7440c4 -5.91%, #7d48cc 111.58%); */
+  background: linear-gradient(90.21deg, #757575 -5.91%, #333434 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -777,10 +798,10 @@ margin: 5rem 2rem;
 }
 .proj-txtx span {
   font-style: italic;
-  font-weight: 800;
+  font-weight: 500;
   font-size: 15px;
   letter-spacing: 0.8px;
-  color: black;
+  color: white;
 }
 .background-image-right {
   top: 20%;
@@ -944,7 +965,7 @@ select:focus {
   padding: 1.5rem 3rem;
   font-size: 1.8rem;
   background-color: var(--main-color);
-  color: white;
+  color: black;
   border: none;
   border-radius: 2rem;
   cursor: pointer;
@@ -954,6 +975,7 @@ select:focus {
 
 .contacto form .btn:hover {
   background-color: var(--main-color-hover);
+    color: white;
 }
 
 /* FOOTER */
@@ -1128,7 +1150,7 @@ select:focus {
   }
   .home-content p {
     max-width: 600px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
   .home-img img {
     width: 56vw;
@@ -1232,9 +1254,10 @@ ul {
   border: none;
 }
 
-
-.list-button:hover {
+/* SELECCION DE CONTACTO LLAMADA, WHTASAP,EMAIL */
+.list-button:hover { 
   background-color: var(--main-color); 
+  background-color: #757575; 
   color: white;
   cursor: pointer;
   padding: 2rem;
@@ -1251,7 +1274,8 @@ ul {
 
 
 .dropdown-title.text-truncate{
-  color: var(--text-color);
+   color: var(--text-color); 
+  
 }
 
 .dropdown-button {
@@ -1265,6 +1289,7 @@ ul {
   padding: 1rem 2rem;        
   font-size: 1.8rem;
 }
+
 
 .dropdown-list-wrapper ul li {
   margin-bottom: 2rem; /* espacio debajo de cada item */

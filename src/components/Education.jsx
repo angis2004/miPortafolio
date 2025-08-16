@@ -10,13 +10,16 @@ const Education = () => {
           <div className="timeline-dot"></div>
           <div className="timeline-date"> Actualmente</div>
           <div className="timeline-content">
-            <h3>Diseñadora Web – Inciber</h3>
+            <h3>Diseñadora Web – Clinica Okara</h3>
             <p>
-    Gestión completa de proyectos web en WordPress, incluyendo compra y configuración de dominios.  
-    Instalación y personalización de plantillas para crear sitios web funcionales y atractivos.  
-    Implementación de contenido visual y ajustes de diseño para mejorar la experiencia del usuario.  
-    Coordinación con clientes para entender sus necesidades y entregar soluciones web efectivas.  
-    Aplicación de buenas prácticas en SEO básico y mantenimiento de sitios para garantizar su correcto funcionamiento.
+Realización completa de la página en WordPress con Elementor Pro
+Diseño y estructura en Figma
+Uso de Essential Addons y plantillas reutilizables
+Optimización SEO con Yoast SEO
+Documentación y organización de contenidos
+Optimización de rendimiento (imágenes, velocidad, Core Web Vitals)
+Gestión de hosting y cPanel (SSL, DNS, backups)
+Administración de correos corporativos y accesos
             </p>
           </div>
         </div>
