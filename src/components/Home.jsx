@@ -12,7 +12,7 @@ const Home = () => {
           I'm a <span></span>
         </h3>
         <p>
-Soy una diseñadora web creativa y detallista con formación en la carrera de computacion e informática. Me apasiona crear sitios web intuitivos que combinen funcionalidad y estilo. ¡Construyamos algo increíble juntos!
+          Me caracterizo por mi entusiasmo y rápida capacidad de aprendizaje, adaptándome con facilidad a distintos entornos. Soy organizada, proactiva y orientada a resultados de calidad. Destaco por mis habilidades en liderazgo, comunicación efectiva y resolución de problemas, contribuyendo al éxito de los proyectos y equipos.
         </p>
         <div className="social-icons">
           <a href="https://www.linkedin.com/in/angie-ticllacuri-terra-go-a7a614238/" target="_blank" rel="noopener noreferrer">
