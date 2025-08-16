@@ -1,5 +1,5 @@
 import React from 'react';
-import perfilImg from '../img/perfil.jpg'; // Ajusta la ruta si está en otra carpeta
+import perfilImg from '../img/perfil2.png'; // Ajusta la ruta si está en otra carpeta
 
 const Home = () => {
   return (
