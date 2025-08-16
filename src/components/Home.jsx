@@ -27,7 +27,7 @@ const Home = () => {
 
         </div>
         <div className="btn-group">
-          <a href="/cvTicllacuriMoscoso-Angie.pdf"  target="_blank" className="btn">Descarga CV </a>
+          <a href="/CV-Angie-Ticllacuri-Moscoso.pdf"  target="_blank" className="btn">Descarga CV </a>
           <a href="#contacto" className="btn">Contactame</a>
         </div>
       </div>
