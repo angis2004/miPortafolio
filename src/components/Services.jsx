@@ -1,13 +1,15 @@
 // src/components/Services.jsx
 import React from "react";
 
+
 const servicesData = [
   {
     icon: "bx bxs-paint",
     title: "UI Design",
     description:
       "Diseño de interfaces atractivas y usables con Figma y Photoshop, enfocándome en la experiencia del usuario.",
-  },
+    link: "https://www.globilandia.com.pe/",
+    },
   {
      icon: "bx bx-code-alt",
     title: "Frontend Development",
@@ -38,6 +40,7 @@ const Services = () => {
       <div className="section-services">
         {servicesData.map((service, index) => (
           <div className="service-box" key={index}>
+            
           <i className={`${service.icon} service-icon`}></i>
             <h3>{service.title}</h3>
             <p>{service.description}</p>

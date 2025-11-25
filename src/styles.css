@@ -1,9 +1,5 @@
 
 
-
-
-
-
 .main-container.fade {
   animation: fadeInUp 0.6s ease;
 }
@@ -22,13 +18,6 @@
 
 
 
-
-
-
-
-
-
-
 /* text-decoration: line-through; */
 
 
@@ -37,7 +26,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
+  text-decoration: none !important;
   border: none;
   outline: none;
   scroll-behavior: smooth;
@@ -82,8 +71,10 @@ html {
   overflow-y: auto;
 }
 
+
+
 body {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color) !important;
   color: var(--text-color);
   width: 100%;
   overflow-x: hidden !important;/* Bloquea scroll lateral */
@@ -125,6 +116,7 @@ h2{
 }
 
 a{
+color:red ;
 text-decoration: none;
 }
 .navbar a {
@@ -196,6 +188,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 15rem;
+  color: var(--text-color);
 }
 
 .home-content {
@@ -287,17 +280,17 @@ span {
 
 .btn {
   display: inline-block;
-  padding: 1rem 2.8rem;
   background: var(--main-color);
   box-shadow: 0 0 25px var(--main-color);
   border-radius: 4rem !important;
-  font-size: 1.6rem;
+  font-size: 1.6rem !important;
   color: black;
   border: 2px solid transparent;
   letter-spacing: 0.1rem;
-  font-weight: 600;
+  font-weight: 600 !important;
   transition: 0.3s ease-in-out;
   cursor: pointer;
+  padding: 1rem 2.8rem !important;
 }
 
 .btn:hover ,.btn-s:hover{
@@ -309,6 +302,13 @@ span {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  color: var(--main-color);
+}
+
+/* Primer botón: "Descarga CV" - fondo main-color, texto blanco */
+.btn-group a:nth-of-type(1) {
+ background-color: var(--main-color);
+  color: var(--bg-color); 
 }
 
 .btn-group a:nth-of-type(2) {
@@ -418,6 +418,8 @@ span {
   font-size: 8rem;
   text-align: center;
   margin: 5rem 0;
+  color: var(--text-color);
+  font-weight: 800;
 }
 
 .education {
@@ -530,18 +532,22 @@ span {
   
 /* services section */
 
-
+.services{
+background-color: var(--bg-color); 
+}
  .main-text {
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--hover-color);
+  color: var(--text-color);
+  font-weight: 800;
 }
 
 .main-text h2 {
-    font-size: 8rem;
-    text-align: center;
-  margin-bottom: 6rem;
+font-size: 8rem;
+text-align: center;
+margin-bottom: 6rem;
+font-weight: 800;
 }
 
 .main-text span {
@@ -567,7 +573,7 @@ span {
   max-width: calc(50% - 2rem);
   padding: 2rem 3rem;
   text-align: center;
-  background: var(--secon-bg-color);
+  background: var(--second-bg-color); 
   transition: transform 0.45s;
   border-radius: 2rem;
   border: 3px solid var(--main-color);
@@ -604,7 +610,7 @@ span {
   justify-content: center;
   font-size: 3rem;
   border-radius: 50%;
-  color: var(--hover-color);
+  color: var(--text-color);
   box-shadow: var(--neon-box-shadow);
   outline: 3px solid var(--main-color);
 }
@@ -671,13 +677,14 @@ margin: 5rem 2rem;
 .project {
   /* padding: 80px 0; */
   position: relative;
-  background-color: black;
+  background: var(--second-bg-color);
   padding: 10rem 3% 2rem;
 }
 .project h2 {
 	font-size: 8rem;
 	font-weight: 700;
   text-align: center;
+  color: var(--text-color);
 }
 .project p {
   color: #B8B8B8;
@@ -765,7 +772,7 @@ margin: 5rem 2rem;
 .proj-imgbx::before {
   content: "";
   /* background: linear-gradient(90.21deg, #7440c4 -5.91%, #7d48cc 111.58%); */
-  background: linear-gradient(90.21deg, #757575 -5.91%, #333434 111.58%);
+  background: linear-gradient(90.21deg, #0c0c0c -5.91%, #151818 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -795,7 +802,10 @@ margin: 5rem 2rem;
   letter-spacing: 0.8px;
   line-height: 1.1em;
   margin-bottom: 20px;
+  color:var(--text-color); 
 }
+
+
 .proj-txtx span {
   font-style: italic;
   font-weight: 500;
@@ -1113,21 +1123,21 @@ select:focus {
   }
 
   .navbar {
-    position: absolute;
+    position: absolute  !important;
     top: 100%;
     right: 0;
     width: 50%;
-    padding: 1rem 3%;
-    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 3% !important;
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(20px);
     border-bottom-left-radius: 2rem;
     border-left: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
-    display: none;
+    display: none !important;
   }
 
   .navbar.active {
-    display: block;
+    display: block !important;
   }
 
   .navbar a {
@@ -1182,13 +1192,12 @@ select:focus {
 /* PROBANDO DROPDO */
 
  .dropdown-container{
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
     flex: 1 1 45%;
     /* padding: 2.5rem; */
     padding: 2.5rem 0;
-
     font-size: 1.8rem;
     color: var(--text-color);
     background: var(--second-big-color);
@@ -1201,9 +1210,7 @@ input:hover,.dropdown-container:HOVER,textarea:hover{
       /* border: 0.1rem solid var(--main-color);  */
  /* transform: scale(1.05); */
   box-shadow: 0 0 25px var(--main-color);
-
 }
-  
 
 .dropdown-list-container{
     flex: 1 1 45%;
@@ -1212,7 +1219,6 @@ input:hover,.dropdown-container:HOVER,textarea:hover{
     resize: none;
     width: 100%;
 }
-
 
 input::placeholder,textarea::placeholder {
   color: var(--text-color);
@@ -1246,8 +1252,6 @@ ul {
   font-size: 1.8rem;;
 }
 
-
-
 .main-button , .text-truncate{
   background: transparent;
   color: var(--text-color);
@@ -1271,11 +1275,8 @@ ul {
 }
 
 
-
-
 .dropdown-title.text-truncate{
    color: var(--text-color); 
-  
 }
 
 .dropdown-button {
@@ -1302,4 +1303,125 @@ ul {
   /* max-height: var(--dropdown-height); */
   transition: max-height var(--transition-time) var(--transition-timing);
 }
+
+
+/* ====== PORTFOLIO SECTION ====== */
+
+/* ====== PORTFOLIO SECTION ====== */
+
+.proyecto-section {
+  text-align: center;
+  padding: 80px 20px;
+  background:  #000;
+  padding: 10rem 12% 10rem;
+  
+};
+
+.proyecto-header {
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+/* .proyecto-number {
+  font-size: 80px;
+  font-weight: 700;
+  color: #c8a5b5;
+  opacity: 0.2;
+  margin-bottom: 10px;
+} */
+
+/* .proyecto-subtitle {
+  letter-spacing: 2px;
+  color: #b8919c;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 10px;
+} */
+
+.proyecto-title {
+ 
+    font-size: 8rem;
+    text-align: center;
+    margin-bottom: 6rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+
+.proyecto-desc{
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px auto 30px auto;
+    text-align: center;
+}
+
+.proyecto-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(2, 1fr); /* ✅ Siempre 2 columnas */
+  gap: 50px;
+  justify-items: center;
+}
+
+.proyecto-item {
+  width: 100%;
+  /* max-width: 500px; */
+  background-color: #fafafab3;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.proyecto-item:hover {
+  transform: translateY(-10px);
+}
+
+/* 🪄 Efecto de imagen que baja al hover */
+.proyecto-image-scroll {
+ height: 350px;  /*  Ventana visible -alto */
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px 15px 0 0;
+}
+
+.proyecto-image-scroll img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: translateY(0);
+ transition: transform 3s linear; /* ⚡ más rápido y continuo  */
+}
+
+.proyecto-item:hover .proyecto-image-scroll img {
+    transform: translateY(calc(-100% + 500px));  /* 👈 se desplaza hasta el final real */
+}
+
+.proyecto-item h4 {
+  font-size: 18px;
+  margin: 15px 0 20px 0;
+  color: #222;
+  font-weight: 500;
+}
+
+
+/* 📱 MOBILE: 1 columna y gap reducido */
+@media (max-width: 768px) {
+  .proyecto-grid {
+    grid-template-columns: 1fr; /* ✅ 1 columna */
+    gap: 15px; /* ✅ Gap reducido */
+  }
+
+  .proyecto-image-scroll {
+    height: 300px; /* ✅ Opcional: más bajo en móvil */
+  }
+  
+  .proyecto-item:hover .proyecto-image-scroll img {
+    transform: translateY(calc(-100% + 300px)); /* ✅ Ajustado */
+  }
+}
+
+
 

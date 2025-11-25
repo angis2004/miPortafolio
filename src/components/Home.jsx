@@ -1,6 +1,7 @@
 import React from 'react';
 import perfilImg from '../img/perfil2.png'; // Ajusta la ruta si está en otra carpeta
 
+
 const Home = () => {
   return (
     <section className="home" id="home">

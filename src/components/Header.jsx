@@ -3,22 +3,30 @@ import React, { useEffect,useState } from 'react';
 // import 'styles.css'// Asegúrate de tener el CSS
 
 const Header = () => {
-  const[isMenuOpen,setIsMenuOpen] = useState(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Cerrar el menú al hacer clic en un enlace
   useEffect(() => {
     const links = document.querySelectorAll('.navbar a');
-    links.forEach((link) =>
-      link.addEventListener('click', () => setIsMenuOpen(false))
-    );
+    
+    const handleClick = () => setIsMenuOpen(false);
+    
+    // Agregar eventos
+    links.forEach((link) => {
+      link.addEventListener('click', handleClick);
+    });
+
+    // ✅ CLEANUP - Limpiar eventos cuando el componente se desmonta
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener('click', handleClick);
+      });
+    };
   }, []);
 
-
-return (
+  return (
     <header className="header">
-      <a href="#home" className="logo"
-      >
+      <a href="#home" className="logo">
         Angie <span>Ticllacuri</span>
       </a>
 
@@ -32,11 +40,9 @@ return (
       {/* Navbar con clase toggle si está abierto */}
       <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
         <a href="#home" className="active">Inicio</a>
-         {/* <a href="#sobremi"> Sobre mi</a> */}
-        <a href="#education"> Experiencia</a>
+        <a href="#education">Experiencia</a>
         <a href="#services">Servicios</a>
-        {/* <a href="#testimonials">Testimonials</a> */}
-        <a href="#projects">Projectos</a>
+        <a href="#projects">Proyectos</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
