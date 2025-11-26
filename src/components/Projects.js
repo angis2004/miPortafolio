@@ -132,16 +132,21 @@ export const Projects = () => {
       imgUrl: projImg11,
        link: "https://maelo-solar.netlify.app/",
     },
+    
     {
       title: "Pagina Web 2",
       description: "Portafolio realizado con Html , css y React",
       imgUrl: projImg13,
     },
+
+
     {
       title: "Pagina Web 3",
       description: "",
       imgUrl: projImg3,
     },
+
+  
     {
       title: "Pagina Web 4",
       description:"",

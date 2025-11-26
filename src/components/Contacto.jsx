@@ -1,6 +1,7 @@
 // src/components/Contacto.jsx
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import Swal from 'sweetalert2';
 // Asegúrate de importar los estilos del dropdown personalizado
 
 const Contacto = () => {
@@ -23,13 +24,30 @@ const Contacto = () => {
       .then(
         (result) => {
           console.log("SUCCESS!", result.text);
-          alert("Mensaje enviado correctamente");
+          
+          Swal.fire({
+            icon: 'success',
+            title: '¡Mensaje Enviado!',
+            text: 'Gracias por contactarme. Te responderé pronto.',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#4F46E5',
+            // timer: 3000,
+            // timerProgressBar: true
+          });
+          
           e.target.reset();
           setSelectedOption("Selecciona una Opción");
         },
         (error) => {
           console.log("FAILED...", error.text);
-          alert("Error al enviar el mensaje");
+          
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Hubo un problema al enviar el mensaje. Intenta de nuevo.',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#d33'
+          });
         }
       );
   };
@@ -56,7 +74,6 @@ const Contacto = () => {
             <input type="email" name="user_email" placeholder="Correo electrónico" required />
           </div>
 
-          {/* Dropdown personalizado */}
           <div className="input-row">
             <div className="dropdown-container">
               <input type="hidden" name="user_contact_method" value={selectedOption} />
@@ -76,17 +93,17 @@ const Contacto = () => {
                 <div className="dropdown-list-container">
                   <div className="dropdown-list-wrapper">
                     <ul className="dropdown-list">
-{options.map((option) => (
-  <li key={option} className="dropdown-list-item">
-    <button
-      type="button"
-      className={`list-button ${selectedOption === option ? 'selected' : ''}`}
-      onClick={() => handleSelect(option)}
-    >
-      <span className="text-truncate">{option}</span>
-    </button>
-  </li>
-))}
+                      {options.map((option) => (
+                        <li key={option} className="dropdown-list-item">
+                          <button
+                            type="button"
+                            className={`list-button ${selectedOption === option ? 'selected' : ''}`}
+                            onClick={() => handleSelect(option)}
+                          >
+                            <span className="text-truncate">{option}</span>
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
