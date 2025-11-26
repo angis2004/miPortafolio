@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="social">
-          <a href="https://www.linkedin.com/in/angie-ticllacuri-terra-go-a7a614238/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/angie-ticllacuri-moscoso-a7a614238/" target="_blank" rel="noopener noreferrer">
           <i className="bx bxl-linkedin"></i>
           </a>
           <a href="https://github.com/angis2004" target="_blank" rel="noopener noreferrer">

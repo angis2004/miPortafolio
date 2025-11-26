@@ -130,13 +130,12 @@ export const Projects = () => {
       title: "Pagina Web 1",
       description: "Landing page estática hecha con HTML ,CSS , Javascript, enfocada en servicios de una empresa de servicio renobale con energia solar",
       imgUrl: projImg11,
-       link: "https://www.globilandia.com.pe/",
+       link: "https://maelo-solar.netlify.app/",
     },
     {
       title: "Pagina Web 2",
       description: "Portafolio realizado con Html , css y React",
       imgUrl: projImg13,
-       link: "https://www.globilandia.com.pe/",
     },
     {
       title: "Pagina Web 3",

@@ -16,7 +16,7 @@ const Home = () => {
           Me caracterizo por mi entusiasmo y rápida capacidad de aprendizaje, adaptándome con facilidad a distintos entornos. Soy organizada, proactiva y orientada a resultados de calidad. Destaco por mis habilidades en liderazgo, comunicación efectiva y resolución de problemas, contribuyendo al éxito de los proyectos y equipos.
         </p>
         <div className="social-icons">
-          <a href="https://www.linkedin.com/in/angie-ticllacuri-terra-go-a7a614238/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/angie-ticllacuri-moscoso-a7a614238/" target="_blank" rel="noopener noreferrer">
           <i className="bx bxl-linkedin"></i>
           </a>
           <a href="https://github.com/angis2004" target="_blank" rel="noopener noreferrer" >
