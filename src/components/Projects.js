@@ -16,6 +16,8 @@ import projImg13 from "../img/react+html.png";
 import projImg14 from "../img/Okara.jpeg";
 import projImg15 from "../img/cavavip.jpeg";
 import projImg16 from "../img/inesjaz.jpeg";
+import projImg17 from "../img/Clinica-Okara.jpeg";
+
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -75,7 +77,16 @@ export const Projects = () => {
       imgUrl: projImg16,
        link: "https://inesjaz.tiendada.com/",
     },
+
+{
+  title: "Sitio Web Corporativo - Clínica Estética",
+  description: "Página web corporativa para clínica de medicina estética y láser, con diseño elegante, catálogo de tratamientos y sistema de contacto directo para agendar citas.",
+  imgUrl: projImg17,
+  link: "https://okara.pe/",
+  
+} ,
   ];
+
 
   const docProjects = [
     {
