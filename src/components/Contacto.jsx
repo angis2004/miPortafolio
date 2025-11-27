@@ -1,7 +1,7 @@
 // src/components/Contacto.jsx
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 // Asegúrate de importar los estilos del dropdown personalizado
 
 const Contacto = () => {
@@ -24,29 +24,40 @@ const Contacto = () => {
       .then(
         (result) => {
           console.log("SUCCESS!", result.text);
-          
+
           Swal.fire({
-            icon: 'success',
-            title: '¡Mensaje Enviado!',
-            text: 'Gracias por contactarme. Te responderé pronto.',
-            confirmButtonText: 'Aceptar',
-            confirmButtonColor: '#4F46E5',
-            // timer: 3000,
-            // timerProgressBar: true
+            icon: "success",
+            title: "¡Mensaje Enviado!",
+            text: "Gracias por contactarme. Te responderé pronto.",
+            confirmButtonText: "Aceptar",
+            confirmButtonColor:'#e3e0f3', // ← TU COLOR
+            //  timerProgressBar: true,
+           background: '#0a0a0a',
+            color: "#fff", // Texto blanco
+            iconColor: '#e3e0f3', // ← TU COLOR
+            backdrop: `
+            rgba(0,0,0,0.8)
+  `,
+            customClass: {
+              popup: "swal-dark-theme",
+              confirmButton: "swal-btn-custom",
+              title: "swal-title-custom",
+              htmlContainer: "swal-text-custom",
+            },
           });
-          
+
           e.target.reset();
           setSelectedOption("Selecciona una Opción");
         },
         (error) => {
           console.log("FAILED...", error.text);
-          
+
           Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Hubo un problema al enviar el mensaje. Intenta de nuevo.',
-            confirmButtonText: 'Aceptar',
-            confirmButtonColor: '#d33'
+            icon: "error",
+            title: "Error",
+            text: "Hubo un problema al enviar el mensaje. Intenta de nuevo.",
+            confirmButtonText: "Aceptar",
+            confirmButtonColor: "#d33",
           });
         }
       );
@@ -65,24 +76,40 @@ const Contacto = () => {
       <form ref={form} onSubmit={sendEmail}>
         <div className="input-group">
           <div className="input-row">
-            <input type="text" name="user_name" placeholder="Nombre completo" required />
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Nombre completo"
+              required
+            />
             <input type="text" name="user_company" placeholder="Empresa" />
           </div>
 
           <div className="input-row">
             <input type="text" name="user_phone" placeholder="Teléfono" />
-            <input type="email" name="user_email" placeholder="Correo electrónico" required />
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Correo electrónico"
+              required
+            />
           </div>
 
           <div className="input-row">
             <div className="dropdown-container">
-              <input type="hidden" name="user_contact_method" value={selectedOption} />
+              <input
+                type="hidden"
+                name="user_contact_method"
+                value={selectedOption}
+              />
               <button
                 type="button"
                 className="dropdown-button main-button"
                 onClick={() => setShowDropdown(!showDropdown)}
               >
-                <span className="dropdown-title text-truncate">{selectedOption}</span>
+                <span className="dropdown-title text-truncate">
+                  {selectedOption}
+                </span>
                 <span className="dropdown-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                     <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
@@ -97,7 +124,9 @@ const Contacto = () => {
                         <li key={option} className="dropdown-list-item">
                           <button
                             type="button"
-                            className={`list-button ${selectedOption === option ? 'selected' : ''}`}
+                            className={`list-button ${
+                              selectedOption === option ? "selected" : ""
+                            }`}
                             onClick={() => handleSelect(option)}
                           >
                             <span className="text-truncate">{option}</span>

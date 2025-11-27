@@ -1306,122 +1306,56 @@ ul {
 
 
 /* ====== PORTFOLIO SECTION ====== */
-
-/* ====== PORTFOLIO SECTION ====== */
-
-.proyecto-section {
-  text-align: center;
-  padding: 80px 20px;
-  background:  #000;
-  padding: 10rem 12% 10rem;
-  
-};
-
-.proyecto-header {
-  max-width: 700px;
-  margin: 0 auto 60px auto;
+/* Personalización SweetAlert2 */
+.swal-dark-theme {
+  border-radius: 20px !important;
+  border: 2px solid rgba(227, 224, 243, 0.5) !important;
+  box-shadow: 0 0 50px rgba(227, 224, 243, 0.3) !important;
+  padding: 30px 0px 30px !important
+;
 }
 
-/* .proyecto-number {
-  font-size: 80px;
-  font-weight: 700;
-  color: #c8a5b5;
-  opacity: 0.2;
-  margin-bottom: 10px;
-} */
-
-/* .proyecto-subtitle {
-  letter-spacing: 2px;
-  color: #b8919c;
-  font-weight: 500;
-  font-size: 14px;
-  margin-bottom: 10px;
-} */
-
-.proyecto-title {
- 
-    font-size: 8rem;
-    text-align: center;
-    margin-bottom: 6rem;
-    font-weight: 800;
-    color: var(--text-color);
+.swal-title-custom {
+  color: #fff !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
 }
 
-
-.proyecto-desc{
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px auto 30px auto;
-    text-align: center;
+.swal-text-custom {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  line-height: 1.6 !important;
 }
 
-.proyecto-grid {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-  grid-template-columns: repeat(2, 1fr); /* ✅ Siempre 2 columnas */
-  gap: 50px;
-  justify-items: center;
+.swal-btn-custom {
+  border-radius: 10px !important;
+  padding: 8px 40px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  background: #e3e0f3 !important;
+  color: #000 !important; /* Texto negro para que se vea en fondo blanco */
 }
 
-.proyecto-item {
-  width: 100%;
-  /* max-width: 500px; */
-  background-color: #fafafab3;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+.swal-btn-custom:hover {
+  transform: scale(1.05) !important;
+  box-shadow: var(--main-glow) !important;
 }
 
-.proyecto-item:hover {
-  transform: translateY(-10px);
+.swal2-timer-progress-bar {
+  background: #e3e0f3 !important;
 }
 
-/* 🪄 Efecto de imagen que baja al hover */
-.proyecto-image-scroll {
- height: 350px;  /*  Ventana visible -alto */
-  overflow: hidden;
-  position: relative;
-  border-radius: 15px 15px 0 0;
+.swal2-icon.swal2-success {
+  border-color: #e3e0f3 !important;
 }
 
-.proyecto-image-scroll img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transform: translateY(0);
- transition: transform 3s linear; /* ⚡ más rápido y continuo  */
+.swal2-icon.swal2-success [class^='swal2-success-line'] {
+  background-color: #e3e0f3 !important;
 }
 
-.proyecto-item:hover .proyecto-image-scroll img {
-    transform: translateY(calc(-100% + 500px));  /* 👈 se desplaza hasta el final real */
+.swal2-icon.swal2-success .swal2-success-ring {
+  border-color: rgba(227, 224, 243, 0.3) !important;
 }
-
-.proyecto-item h4 {
-  font-size: 18px;
-  margin: 15px 0 20px 0;
-  color: #222;
-  font-weight: 500;
-}
-
-
-/* 📱 MOBILE: 1 columna y gap reducido */
-@media (max-width: 768px) {
-  .proyecto-grid {
-    grid-template-columns: 1fr; /* ✅ 1 columna */
-    gap: 15px; /* ✅ Gap reducido */
-  }
-
-  .proyecto-image-scroll {
-    height: 300px; /* ✅ Opcional: más bajo en móvil */
-  }
-  
-  .proyecto-item:hover .proyecto-image-scroll img {
-    transform: translateY(calc(-100% + 300px)); /* ✅ Ajustado */
-  }
-}
-
-
-
