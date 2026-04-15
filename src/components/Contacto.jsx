@@ -16,10 +16,10 @@ const Contacto = () => {
 
     emailjs
       .sendForm(
-        "service_ymo2941",
-        "template_bgcwbt9",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         form.current,
-        "yrueeY4GaQNAuxO57"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -70,6 +70,7 @@ const Contacto = () => {
 
   return (
     <section className="contacto" id="contacto">
+      <p className="section-label">HABLEMOS</p>
       <h2 className="heading">
         Contacta<span>me</span>
       </h2>
